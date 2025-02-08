@@ -1,0 +1,8 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "test-changeset-flow-package": "1.0.0"
+  },
+  "changesets": []
+}
