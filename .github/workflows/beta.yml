@@ -28,10 +28,10 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          version: |
-            npm run version-packages
+          version: npm run version-packages
+          publish: |
             npm version prerelease --preid beta --no-git-tag-version
-          publish: npm publish --tag beta --access public
+            npm publish --tag beta --access public
           commit: "chore: version packages (beta)"
           title: "chore: version packages (beta)"
         env:
