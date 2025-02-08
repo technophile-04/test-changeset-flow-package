@@ -4,5 +4,7 @@
   "initialVersions": {
     "test-changeset-flow-package": "1.0.0"
   },
-  "changesets": []
+  "changesets": [
+    "old-hounds-walk"
+  ]
 }
