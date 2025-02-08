@@ -1,4 +1,4 @@
-name: Beta Release
+name: Release (Beta)
 
 on:
   push:
@@ -21,13 +21,19 @@ jobs:
           node-version: "18.x"
           registry-url: "https://registry.npmjs.org"
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm ci
 
-      - name: Create and publish beta release
-        run: |
-          npm run version-packages
-          npm version prerelease --preid beta
-          npm publish --tag beta
+      - name: Create Beta Release
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          version: |
+            npm run version-packages
+            npm version prerelease --preid beta --no-git-tag-version
+          publish: npm publish --tag beta --access public
+          commit: "chore: version packages (beta)"
+          title: "chore: version packages (beta)"
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
