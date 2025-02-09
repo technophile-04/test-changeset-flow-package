@@ -1,5 +1,11 @@
 # test-changeset-flow-package
 
+## 1.0.1-beta.2
+
+### Patch Changes
+
+- 6825530: hellooooo
+
 ## 1.0.1-beta.1
 
 ### Patch Changes
