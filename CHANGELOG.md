@@ -1,5 +1,15 @@
 # test-changeset-flow-package
 
+## 1.0.1
+
+### Patch Changes
+
+- fd2c6bc: hello test
+- e7184dd: hello
+- 0bbd201: blah blah
+- 6825530: hellooooo
+- 8cc01e1: hello byewww
+
 ## 1.0.1-beta.4
 
 ### Patch Changes
