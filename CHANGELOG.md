@@ -1,5 +1,11 @@
 # test-changeset-flow-package
 
+## 1.0.1-beta.3
+
+### Patch Changes
+
+- 8cc01e1: hello byewww
+
 ## 1.0.1-beta.2
 
 ### Patch Changes
