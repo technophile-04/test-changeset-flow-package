@@ -5,6 +5,7 @@
     "test-changeset-flow-package": "1.0.0"
   },
   "changesets": [
+    "grumpy-adults-double",
     "old-hounds-walk"
   ]
 }
