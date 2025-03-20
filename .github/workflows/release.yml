@@ -22,13 +22,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Check if version packages pr exists
-        id: check-pr
+      - name: Check for existing release PR
         run: |
-          if gh pr list --state open --search "chore: version packages" --json title --jq '.[].title' | grep -q "chore: version packages"; then
-            echo "::set-output name=pr_exists::true"
-          else
-            echo "::set-output name=pr_exists::false"
+          existing_pr=$(gh pr list --state open --label "release" --json number --jq '.[0].number')
+          if [ -n "$existing_pr" ]; then
+            echo "Release PR already exists: $existing_pr"
+            exit 1
+          fi
 
       - name: Create Release Pull Request or Publish
         id: changesets
