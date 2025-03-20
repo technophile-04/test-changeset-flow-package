@@ -29,10 +29,11 @@ jobs:
           existing_pr=$(gh pr list --state open --json title --jq '.[] | select(.title | contains("version packages"))')
           if [ -n "$existing_pr" ]; then
             echo "Release PR already exists."
-            echo "::set-output name=skip::true"
+            echo "SKIP_REMAINING=true" >> $GITHUB_ENV
           fi
 
       - name: Create Release Pull Request or Publish
+        if: ${{ env.SKIP_REMAINING != 'true' }}
         id: changesets
         uses: changesets/action@v1
         with:
