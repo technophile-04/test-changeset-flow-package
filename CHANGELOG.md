@@ -1,5 +1,13 @@
 # test-changeset-flow-package
 
+## 1.0.2
+
+### Patch Changes
+
+- 6b08c18: test
+- e745bc2: remove exclaimaiton
+- dead57b: remove exclamation
+
 ## 1.0.1
 
 ### Patch Changes
