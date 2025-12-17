@@ -9,6 +9,10 @@
     "dist",
     "src"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/technophile-04/test-changeset-flow-package.git"
+  },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "eslint src/**/*.ts",
